@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Basic CSS</title>
+    <style>
+       body {
+               
+                margin: 0;
+                padding: 0px;
+                height: 100vh;
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                
+             }
+             .container
+             {
+               max-width: 900px;
+                margin: auto;
+                 padding: 20px;
+                background-color:#ffffff ;
+                border-radius: 8px;
+                
+             }
+        h1 {
+            color:rgb(12, 12, 71);
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: rgb(6, 108, 148);
+            font-size: 29px;
+            border-bottom: 2px solid #dde8ed;
+             letter-spacing: 1px;
+             margin: 30px 0px 15px;
+             padding: 20px;
+
+        }
+        h3 {
+            color: #16A085;
+            font-size: 25px;
+        }
+        p {
+            font-size: 15px;
+            color: rgb(85, 85, 85);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 10px;
+            background-color:#34495E;
+            border-radius: 6px;
+            gap: 10px;
+              
+        }
+        
+        nav li a {
+                 display: block;
+                 color: white;
+                 text-align: center;
+                 padding: 8px 16px;
+                 border-radius: 4px;
+                 text-decoration: none;
+                transition: background-color 0.3s, color 0.3s;
+             }
+    
+
+        nav li a:hover:not(.active) {
+            background-color:rgb(223, 220, 220);
+            color: rgb(4, 4, 67);;
+        }
+
+        nav li a.active {
+            background-color:rgb(223, 220, 220);
+            color: rgb(4, 4, 67);;
+           }
+
+        
+        .button_title
+        {
+              font-size: 28px;
+            color: rgb(6, 108, 148);
+        }
+        button
+        {
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-right: 14px;
+        }
+    
+        .primary
+        {
+            background-color:#008CBA;
+            height: 40px;
+            width: 140px;
+            opacity: 0.9;
+        }
+        .primary:hover{
+            opacity:1;
+            transform:translateY(-5px);
+            
+        }
+        .secondary
+        {
+             background-color: grey;
+            height: 47px;
+            width: 190px;
+             opacity: 0.6;
+        }
+        .secondary:hover{
+            opacity: 1;
+            background-color:rgb(149, 165, 166);
+            transform:translateY(-5px);
+
+        }
+        .danger
+        {
+             background-color: rgb(205, 51, 51);
+            height: 38px;
+            width: 120px;
+            border-radius: 20px;
+             opacity: 0.9;
+             
+        }
+        .danger:hover{
+            opacity:1;
+            background-color: rgb(167, 24, 24);
+            transform:translateY(-5px);
+        }
+        .unorder
+        {
+            font-size: 17px;
+            list-style-type: square;
+            
+        }
+        .order{
+            font-size: 17px;
+            color:rgb(184, 82, 218) ;
+        }
+        .style
+        {
+          background-color:#dde8ed;  
+          border: 2px dashed #bbb;
+          margin: 20px 0px;
+          border-radius: 6px;
+          padding: 40px;
+        }
+        .first
+        {
+            padding: 0px 0px 10px;
+        }
+        
+    
+
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <h1> CSS STYLING DEMONSTARTIONS</h1>
+    <h2>  Navigation Bar </h2>
+    <nav>
+        <ul>
+            <li ><a href="home" class="active">Home</a></li>
+            <li ><a href="About">About</a></li>
+            <li ><a href="Services">Services</a></li>
+            <li ><a href="Contact">Contact</a></li>
+        </ul>
+    </nav>
+    <h2>Heading Styles</h2>
+    <h2 style="color: black;text-align: center;font-size: 39px;border-bottom: none;">THIS IS AN H1 HEADING</h2>
+    <H2 style="font-size: 31px;">This is an H2 heading</H2>
+    <h3 >This is an H3 heading</h3>
+
+    <h2 >Paragraph Styles</h2>
+    <p>This is an standard paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. ducimus distinctio repellendus fuga sapiente totam eius exercitationem. Pariatur a eaque voluptas provident doloribus voluptates saepe nulla optio dolore?</p>
+    <p>
+        This paragraph contains <span style="color:rgba(243, 79, 3, 0.95)"> highlighted text</span> and also some <i>italicized text.</i>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, accusantium quae dicta quas rerum beatae dolorum quisquam, ab  sunt sapiente nihil repellendus ad laborum ratione?
+    </p>
+    <h2 class="button_title">Button Styles</h2>
+    <button class="primary">Primary Button</button>
+    <button class="secondary">Secondary Link Button</button>
+    <button class="danger">Danger Button</button>
+    <h2>List Styles</h2>
+    <h3>Unordered List(Custom)</h3>
+    <ul class="unorder">
+        <li class="first">First item with square bullet</li>
+        <li class="first">Second item with square bullet</li>
+        <li class="first">Third item with square bullet</li>
+    </ul>
+    <h3>Ordered List (Custom)</h3>
+    <ol type="i" class="order">
+        <li class="first">First item - lower roman</li>
+        <li class="first">Second item - lower roman</li>
+        <li class="first">Third item - lower roman</li>
+    </ol>
+    <h2>Div Styling</h2>
+    <div class="style">
+    <p >This is a div with various styles applied. background, border, padding,
+         margin, and a box shadow. It demonstrates how to contain and style a block of content
+    </p>
+        <p>The text color inside this div is also specifically
+         styled.</p>
+    </div>
+</div>
+
+    
+    
+</body>
+</html>
